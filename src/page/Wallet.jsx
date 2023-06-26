@@ -19,7 +19,7 @@ const Wallet = () => {
 						<p className="title">나의 예치금 잔액</p>
 						<p className="value">0 원 <span style={{fontSize:14, paddingLeft:10}}>	▶</span></p>
 					</div>
-					<img src='/bluechip/images/gift.jpg' className="my-money-img"/>
+					<img src='/dive/images/gift.jpg' className="my-money-img"/>
 				</div>
 				
 				<div className="my-account-wrapper">

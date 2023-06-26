@@ -8,10 +8,30 @@
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>BLUECHIP</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>MEVER : DIVE</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script>
+    let devLine = false;
+    $(document).on(`keyup`, function (e) {
+      e.keyCode === 115 && toggleDevMode();
+    });
+
+    const toggleDevMode = () => {
+      if (devLine) {
+        devLine = false;
+        $("*").css({ outline: "none" });
+        $("span.guide").hide();
+      } else {
+        devLine = true;
+        $("*").css({ outline: "1px solid red" });
+        $("span.guide").show();
+      }
+    };
+  </script>
 </html>

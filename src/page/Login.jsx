@@ -7,7 +7,6 @@ import jwtDecode from 'jwt-decode';
 
 import { pageState, userState, alertState } from "../recoil/state";
 import ToastAlert from "./../component/ToastAlert";
-import logo from "../logo.png"
 
 const Login = () => {
   //페이지세팅
@@ -58,13 +57,14 @@ const Login = () => {
   return (
     <div className="page-container">
       <div className="login-page flex-column-center">
-        <img src={logo} alt="" className={`hello`}/>
+        <img src={'/dive/images/logo.png'} alt="" className={`main-logo`}/>
+        <p className="logo-text">DIVE THE METAVERSE</p>
         <input type="text" placeholder="아이디를 입력해주세요" onChange={(e)=>{setLoginInfo({...loginInfo, id:e.target.value})}}/>
         <input type="password" placeholder="비밀번호를 입력해주세요" onChange={(e)=>{setLoginInfo({...loginInfo, pw:e.target.value})}}/>
         <button className="btn btn-pbg login-btn" onClick={ handleLoginClick }>로그인</button>
         <div className="submenu-area flex-row-sb">
           <div className="social-login-btn">
-            <img className="social-login-logo" src="/bluechip/images/google-logo.png" alt=""  />
+            <img className="social-login-logo" src="/dive/images/google-logo.png" alt=""  />
             GOOGLE LOGIN
             <GoogleLogin
             buttonText="Google로 로그인"

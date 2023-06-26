@@ -5,8 +5,7 @@
 	left:50%; 
 	bottom:0;
 	transform:translateX(-50%);
-	box-shadow:0 0 5px 0 rgba(0,0,0,0.2);
-	border:1px solid $blue;
+	box-shadow:0 0 8px 0 rgba(0,0,0,0.3);
 	display:flex; justify-content: flex-start; align-items: center;
 	padding:8px 16px;
 	background:$bgColor;
@@ -16,12 +15,12 @@
 	opacity:0;
 	min-height:60px;
 	z-index:1001;
-	font-weight:600;
+	font-weight:400;
 	pointer-events:none;
-
+	font-size:clamp(14px, 3vw, 20px);
 }
 
 .toast-alert {
-	&.ok { @include ToastAlert(rgba(255,255,255,0.9), $blue) }
+	&.ok { @include ToastAlert($purple, #fff) }
 	&.open { bottom:10%; opacity:1; }
 }

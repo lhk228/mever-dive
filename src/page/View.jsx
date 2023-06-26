@@ -26,7 +26,7 @@ const View = () => {
   return (
     <div className="page-container">
       <div className="view-page nowrap">
-        <img alt='' src='/bluechip/images/magazine.jpg' className="view-top-img"/>
+        <img alt='' src='/dive/images/magazine.jpg' className="view-top-img"/>
         <div className="view-container">
           <ul className="view-header flex-row-start">
             <li>전체</li>

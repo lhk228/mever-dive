@@ -1,10 +1,13 @@
-import { Outlet, Link, useNavigate } from "react-router-dom";
-import { DropboxCircleFilled, CreditCardFilled, ScheduleFilled, SlidersFilled, BellOutlined, VerticalAlignBottomOutlined, LogoutOutlined } from "@ant-design/icons";
-import { pageState, userState, alertState } from "../recoil/state";
-import { useRecoilValue, useResetRecoilState, useSetRecoilState } from "recoil";
+import { Outlet, useNavigate } from "react-router-dom";
+import { SearchOutlined, MenuOutlined} from "@ant-design/icons";
+import { pageState, userState, alertState, menuState } from "../recoil/state";
+import { useRecoilState, useRecoilValue, useResetRecoilState, useSetRecoilState } from "recoil";
 import ToastAlert from "./../component/ToastAlert";
+import Menu from "./../component/Menu";
 
 const MainLayout = () => {
+  
+  const navigate = useNavigate();
   
   	//toastAlert 상태관리
 	const { show, type, msg, delay, openClass } = useRecoilValue(alertState);
@@ -17,34 +20,39 @@ const MainLayout = () => {
   const userInfo = useRecoilValue(userState);
   const resetUser = useResetRecoilState(userState);
   
-  const navigate = useNavigate();
+  //메뉴 상태관리
+  const [ menu, setMenu ]  = useRecoilState(menuState);
+  
   const initPage = () => {
     resetUser();
     navigate('/main');
     toastAlert({ msg: `로그아웃 되었습니다` });
+  }
 
+  const handleMenuClick = () => {
+    setMenu(!menu);
+  }
+
+  const handleSearchClick = () => {
+    navigate("/search");
   }
   return (
     <>       
       <header className={`flex-row-sb  ${pageInfo.title === "상세정보" && 'hidden'}`}>
-        <div className="header-title">{pageInfo.title}</div>
+        <div className="header-logo"><img src="/dive/images/logo.png" alt="" /></div>
+        <div className="header-center flex-column-center">
+          <p className="header-title">{pageInfo.title}</p>
+          <p className="header-subtitle">{pageInfo.subtitle}</p>
+        </div>
         <div className="header-button">
-          {
-            userInfo.user_nm === "GUEST" ? 
-            <LogoutOutlined onClick={ () => {initPage()} }/>
-            : 
-            <BellOutlined onClick={ () => {initPage();}}/>
-          }
-          
-          
+          <SearchOutlined onClick={handleSearchClick}/>
+          <MenuOutlined onClick={handleMenuClick}/>
         </div>
       </header> 
-      <nav id="BOTTOM_BAR" className={`flex-row-center ${pageInfo.title === "상세정보" && 'hidden'}`}>
-        <Link to="/reference"><DropboxCircleFilled /></Link>
-        <Link to="/view"><ScheduleFilled /></Link>
-        <Link to="/wallet"><CreditCardFilled /></Link>
-        <Link to="/download"><SlidersFilled /></Link>
-      </nav>
+      <Menu/>
+      <footer id="BOTTOM_BAR" className={`flex-row-center ${pageInfo.title === "상세정보" && 'hidden'}`}>
+        <img src="/dive/images/btn_upload.png" alt="" />
+      </footer>
       <section>
         <Outlet></Outlet>
       </section>

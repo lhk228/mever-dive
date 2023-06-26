@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dive/static/css/main.6001f0f3.css",
+    "main.js": "/dive/static/js/main.174c3173.js",
+    "static/media/images.svg": "/dive/static/media/images.b67186e51bc9e98c5809.svg",
+    "static/media/logo.png": "/dive/static/media/logo.f97fe69981c733c429a8.png",
+    "service-worker.js": "/dive/service-worker.js",
+    "index.html": "/dive/index.html",
+    "main.6001f0f3.css.map": "/dive/static/css/main.6001f0f3.css.map",
+    "main.174c3173.js.map": "/dive/static/js/main.174c3173.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6001f0f3.css",
+    "static/js/main.174c3173.js"
+  ]
+}

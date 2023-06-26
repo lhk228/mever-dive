@@ -1,5 +1,6 @@
 @import "./variables.scss";
-@import "./page/main.scss";
+@import "./page/intro.scss";
+@import "./page/Main.scss";
 @import "./page/download.scss";
 @import "./page/reference.scss";
 @import "./page/login.scss";
@@ -8,6 +9,8 @@
 @import "./page/wallet.scss";
 @import "./common.scss";
 @import "./component/ToastAlert.scss";
+@import "./component/Menu.scss";
+@import "./page/Discover.scss";
 @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
 
 * { 
@@ -46,59 +49,59 @@ header {
   left:0;
   width:100%;
   height:60px;
-  color:$purple;
   z-index:10;
   padding:0 15px;
-  background:rgba(255,255,255,0.8);
+  background:rgba(255,255,255,0.9);
+  box-shadow:$shadow;
   transition:.5s;
-  .header-title {
-    font-size:24px;
-    font-weight:600;
-    color:#000;
+  .header-logo {
+    width:20%;
+    height:40%;
+    display:flex;
+    align-items: center;
+    img { height:100%; }
+  }
+  .header-center {
+    color:#444;
+    height:100%;
+    width:60%;
+    .header-title { font-size:18px; font-weight:600; color:#444; }
+    .header-subtitle { 
+      font-size:12px; 
+      font-weight:500;
+      color:$purple;
+    }
+  }
+  .header-buton {
+    width:20%;
   }
   .anticon { 
-    color:#000;
-    font-size:30px;
+    color:$gray;
+    font-size:24px;
+    margin-left:10px;
   }
 
-  .anticon-vertical-align-bottom {
-    margin-right:10px;
-  }
   &.hidden { top:-100%; }
 }
 
-nav {
+footer {
   display:flex;
   width:100%;
   height:70px;
   z-index:10;
   position:fixed;
-  bottom:0;
+  bottom:5px;
   left:0;
-  background:rgba(255,255,255,0.8);
-  border-top:1px solid #ddd;
-  box-shadow:0 0 3px 0 rgba(0,0,0,0.1);
-  font-size:6vw;
-  gap:12.5%;
+  background: transparent;
   transition:bottom 0.5s;
-  &.hidden { bottom:-100%; }
-  a { 
-    color:hsl(241, 100%, 63%);
-    transition:.5s;
-    background:rgba(0,0,0,0);
-    border-radius:50%;
-    padding:0 5px;
-    &:hover {
-      transform:scale(1.5);
-    }
-    &:active {
-      background:rgba(0,0,0,0.3);
-    }
+  img {
+    border-radius:50%; box-shadow:0 2px 5px 0 rgba(0,0,0,0.5); overflow:hidden; 
+    width:54px;
+    height:54px;
   }
-  
+  &.hidden { bottom:-100%; }
   @include mobile{ 
     /*브라우저 사이즈767px이하일때*/
-  
   }
 }
 

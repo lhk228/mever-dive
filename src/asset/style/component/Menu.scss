@@ -1,0 +1,68 @@
+nav {
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  right:-100%;
+  background:#fff;
+  z-index:100;
+  opacity:0;
+  transition:.3s;
+  border-left:1px solid #ddd;
+  &.on {
+    right:0;
+    opacity:1;
+  }
+  .anticon-close {
+    font-size:24px;
+    color:$gray;
+    position:absolute;
+    right:15px;
+    top:15px;
+  }
+}
+
+div.menu-container {
+  width:100%;
+  padding:0 20px;
+  margin-top:40px;
+}
+
+div.profile-container {
+  width:100%;
+  height:60px;
+  .profile-img { 
+    width:60px; height:100%; margin-right:10px;
+    border-radius:50%; overflow:hidden;
+    box-shadow:$shadow;
+    background-image:url('../../../images.svg');
+    background-position: -820px -533px;
+    background-size: 679px 658px;
+  }
+  .profile-content {
+    width:calc(100% - 70px);
+    height:100%;
+    .user-id { font-size:24px; font-weight:600; height:60%; display:flex; align-items: center; }
+    .user-profile { font-size:14px; font-weight:500; height:40%; display:flex; align-items: center; color:$purple; }
+  }
+}
+
+.menu-list {
+  width:100%;
+  padding:20px 10px;
+  li { 
+    width:100%; height:40px; display:flex; align-items: center;
+    span {
+      width: 37px;
+      height: 37px;
+      background-image:url('../../../images.svg');
+      background-size: 679px 658px;
+      overflow:hidden;
+    }
+  }
+  li:nth-of-type(1) span { background-position: -1767px -592px }
+  li:nth-of-type(2) span { background-position: -1416px -592px }
+  li:nth-of-type(3) span { background-position: -1656px -592px }
+  li:nth-of-type(4) span { background-position: -1656px -592px }
+  li:nth-of-type(5) span { background-position: -2216px -592px}
+}

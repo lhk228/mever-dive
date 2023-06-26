@@ -1,7 +1,7 @@
 {
-  "name": "bluechip",
+  "name": "mever-dive",
   "version": "0.1.0",
-  "homepage": "https://mever.me/bluechip",
+  "homepage": "https://mever.me/dive",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.15.0",
