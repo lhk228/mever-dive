@@ -1,0 +1,160 @@
+@import "./variables.scss";
+@import "./page/main.scss";
+@import "./page/download.scss";
+@import "./page/reference.scss";
+@import "./page/login.scss";
+@import "./page/detail.scss";
+@import "./page/view.scss";
+@import "./page/wallet.scss";
+@import "./common.scss";
+@import "./component/ToastAlert.scss";
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+
+* { 
+  margin:0; padding:0; position:relative; box-sizing:border-box; font-family:'SCoreDream'; list-style:none; 
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+a {
+  color:#fff;
+  text-decoration: none;
+}
+
+body, html, #root {
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+
+section {
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+  background:#fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:60px;
+  color:$purple;
+  z-index:10;
+  padding:0 15px;
+  background:rgba(255,255,255,0.8);
+  transition:.5s;
+  .header-title {
+    font-size:24px;
+    font-weight:600;
+    color:#000;
+  }
+  .anticon { 
+    color:#000;
+    font-size:30px;
+  }
+
+  .anticon-vertical-align-bottom {
+    margin-right:10px;
+  }
+  &.hidden { top:-100%; }
+}
+
+nav {
+  display:flex;
+  width:100%;
+  height:70px;
+  z-index:10;
+  position:fixed;
+  bottom:0;
+  left:0;
+  background:rgba(255,255,255,0.8);
+  border-top:1px solid #ddd;
+  box-shadow:0 0 3px 0 rgba(0,0,0,0.1);
+  font-size:6vw;
+  gap:12.5%;
+  transition:bottom 0.5s;
+  &.hidden { bottom:-100%; }
+  a { 
+    color:hsl(241, 100%, 63%);
+    transition:.5s;
+    background:rgba(0,0,0,0);
+    border-radius:50%;
+    padding:0 5px;
+    &:hover {
+      transform:scale(1.5);
+    }
+    &:active {
+      background:rgba(0,0,0,0.3);
+    }
+  }
+  
+  @include mobile{ 
+    /*브라우저 사이즈767px이하일때*/
+  
+  }
+}
+
+.page-container {
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+}
+
+//준비중 레이아웃
+.tmp-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow:column wrap;
+  .tmp-title {
+    width:100%;
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    padding:30px 0;
+  }
+  .tmp-msg {
+    font-size:20px;
+  }
+  .anticon{ 
+    color:$blue;
+    font-size:50px;
+  }
+}
+
+// #MENU_ICON { display:none; z-index:101; }
+// #MENU_ICON + label { display:block; width:30px; height:40px; position:fixed; z-index:101; top:10px; right:15px; }
+// #MENU_ICON + label span { background:$purple; display:block; position:absolute; width:30px;height:4px;border-radius:30px; transition:all .35s;}
+// #MENU_ICON + label span:nth-child(1) {top:10px;}
+// #MENU_ICON + label span:nth-child(2) {top:20.25px;transform:translateY(-50%);} 
+// #MENU_ICON + label span:nth-child(3) {bottom:10px;}
+// #MENU_ICON:checked + label {z-index:101;}
+// #MENU_ICON:checked + label span {background:$purple}
+// #MENU_ICON:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+// #MENU_ICON:checked + label span:nth-child(2) {opacity:0;}
+// #MENU_ICON:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+// #MENU_ICON:checked + label + nav {right:0;}
+
+// /* 사이드바 */
+// nav { z-index:100; position:fixed; top:0; right:-200px; transition:0.5s; opacity:0.9; width:200px; height:100%; background:rgba(255,255,255,0.9); box-shadow:$shadow; }
+// nav > ul { margin-top:60px; }
+// nav > ul > li { font-size:16px; color:#444; font-weight:300; width:100%; height:50px; display:flex; align-items: center; justify-content: flex-end; transition:.3s; cursor:pointer; padding-right:20px; border-bottom:1px solid #dfdfdf; }
+// nav > ul > li.title { color:$purple; font-size:20px; font-weight:600; padding:30px 20px; pointer-events:none; border-bottom:none; }
+// nav > ul > li.selected { background:rgba(255,255,255, 0.8); color:$purple; font-weight:600; }
+
+
+
+@media only screen and (max-width: $mobile){
+
+}

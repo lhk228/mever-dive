@@ -1,0 +1,75 @@
+.wallet-page {
+  width:100%;
+  height:calc(100vh - 120px);
+  padding:20px;
+  overflow-y:auto;
+}
+
+.my-money-wrapper {
+  width:100%;
+  height:120px;
+  .my-money-text {
+    width:70%;
+    height:100%;
+    .title {
+      color:#aaa;
+      font-weight:500;
+    }
+    .value {
+      font-size:6vw;
+      font-weight:600;
+      padding:10px 0;
+      display:flex;
+      align-items: center;
+    } 
+  }
+  .my-money-img {
+    width:30%;
+  }
+}
+
+.my-account-wrapper {
+  width:100%;
+  height:200px;
+  margin-top:50px;
+  p { width:100%; height:30px; font-weight:500; color:#aaa; }
+  .my-account-list {
+    width:100%;
+    height:calc(100% - 30px);
+    border:1px solid #ddd;
+    border-radius:8px;
+    box-shadow:$shadow;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-add-account {
+    font-size:40px;
+    color:$blue;
+  }
+}
+
+.my-piece-wrapper {
+  margin-top:30px;
+  width:100%;
+  .tmp-text {
+    position:absolute;
+    color:#fefefe;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
+    top:15%;
+    font-weight:700;
+    font-size:50px;
+    z-index:1;
+  }
+  .title { font-size:5vw; font-weight:600; width:100%; }
+  .anticon-dropbox {
+    margin:20px 0;
+    font-size:100px;
+    color:$blue;
+  }
+  .subtext {
+    color:$blue;
+    font-weight:600;
+    padding:3px 0;
+  }
+}

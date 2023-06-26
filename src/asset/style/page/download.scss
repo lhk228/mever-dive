@@ -1,0 +1,37 @@
+.btn-download {
+	margin-top:40px; 
+	&.hidden {
+		display:none;
+	}
+	&:last-of-type {
+		margin-left:10px;
+	}
+}
+
+//랜딩페이지
+.download-page { 
+	transition:1s;
+	opacity:1;
+	&.hidden {
+		opacity:0;
+	}
+
+	p {
+		width:100%;
+		text-align:center;
+		font-size:4vw;
+		top:0;
+		transition:1s;
+	}
+
+	.version {
+		margin-top:20px;
+		font-weight:600;
+		font-size:3vw;
+	}
+	.copyright {
+		margin-top:20px;
+		font-size:2vw;
+		letter-spacing: -1px;
+	}
+}

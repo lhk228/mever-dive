@@ -1,0 +1,52 @@
+.login-page 
+{
+  width:70%;
+  input { 
+    border:1px solid #bbb;
+    border-radius:5px;
+    outline:none;
+    font-size:16px;
+    margin:5px 0;
+    padding:8px;
+    width:100%;
+    transition:.5s;
+    &:focus {
+      border:1px solid $purple;
+    }
+  }
+  
+  .login-btn { width:100%; margin-top:10px; }
+  .submenu-area {
+    margin-top:10px;
+    width:100%;
+    .social-login-btn { 
+      height:100%;
+      width:100%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      outline:none;
+      border:1px solid #ddd;
+      font-weight:500;
+      height:35px;
+      border-radius:5px;
+      color:#888;
+      font-size:15px;
+      .social-login-logo {
+        position:absolute;
+        height:80%;
+        left:20px;
+      }
+      > div { opacity:0; width:100%; height:100%; overflow:hidden; position:absolute; left:0; top:0;  }
+    }
+    .join-menu { 
+      margin-top:10px;
+      text-align:right;
+      width:100%;
+      font-size:14px;
+      color:#666;
+      font-weight:500;
+    }
+    .join-btn { color:$purple; font-weight:700; }
+  }
+}

@@ -1,0 +1,23 @@
+// flex classes
+.flex-row-center { display:flex; justify-content: center; align-items: center; flex-flow:row wrap; }
+.flex-row-start { display:flex; justify-content: flex-start; align-items: center; flex-flow:row wrap; }
+.flex-row-end { display:flex; justify-content: flex-end; align-items: center; flex-flow:row wrap; }
+.flex-row-sb { display:flex; justify-content: space-between; align-items: center; flex-flow:row wrap; }
+.flex-column-center { display:flex; justify-content: center; align-items: center; flex-flow:column wrap; }
+.flex-column-start { display:flex; justify-content: flex-start; align-items: center; flex-flow:column wrap; }
+.flex-column-end { display:flex; justify-content: flex-end; align-items: center; flex-flow:column wrap; }
+.flex-column-sb { display:flex; justify-content: center; align-items: space-between; flex-flow:column wrap; }
+.nowrap { flex-wrap:nowrap!important; }
+.wrap { flex-wrap:wrap; }
+
+//button classes
+.btn { 
+  border:none; outline:none; box-shadow:$shadow; padding:8px 16px; border-radius:4px; transition:.5s; 
+  cursor:pointer; 
+  &:active { opacity:0.5; }
+}
+
+.btn-purple { background:$purple; color:#fff; }
+.btn-blue { background:$blue; color:#fff; }
+.btn-pbg { background:linear-gradient(to right, $purple, $blue); color:#fff; }
+.btn-disable { background:#bbb; color:#fff; pointer-events:none; }
