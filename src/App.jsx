@@ -11,6 +11,7 @@ import View from "./page/View";
 import Wallet from "./page/Wallet";
 import Setting from "./page/Setting";
 import Detail from "./page/Detail";
+import Search from "./page/Search";
 import Discover from "./page/Discover";
 
 
@@ -30,11 +31,11 @@ function App() {
         <Route element={<MainLayout />}>
           <Route exact path="/main" element={<Main />} />
           <Route exact path="/discover" element={<Discover />} />
+          <Route exact path="/search" element={<Search />} />
+          <Route exact path="/detail" element={isLogin ? <Detail /> : <Intro/>} />
           <Route exact path="/view" element={<View />} />
           <Route exact path="/wallet" element={<Wallet />} />
           <Route exact path="/setting" element={<Setting />} />
-          <Route exact path="/download" element={<Download />} />
-          <Route exact path="/detail" element={isLogin ? <Detail /> : <Intro/>} />
         </Route>
       </Routes>
     </BrowserRouter>

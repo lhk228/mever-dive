@@ -7,7 +7,7 @@ const { persistAtom } = recoilPersist({ key: "dive-session", storage: sessionSto
 // 유저 State
 const userState = atom({
   key: "userState",
-  default: { user_id: null, user_nm: null, auth: null, login: false },
+  default: { user_id: null, user_nm: null, auth: null, user_grade:null, login: false },
   effects_UNSTABLE: [persistAtom],
 });
 

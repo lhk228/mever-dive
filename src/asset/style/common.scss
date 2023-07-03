@@ -20,4 +20,23 @@
 .btn-purple { background:$purple; color:#fff; }
 .btn-blue { background:$blue; color:#fff; }
 .btn-pbg { background:linear-gradient(to right, $purple, $blue); color:#fff; }
+.btn-black { background:black; color:#fff; }
 .btn-disable { background:#bbb; color:#fff; pointer-events:none; }
+
+//input
+.input-wrap { 
+  width:100%;
+  input {
+    padding:5px;
+    border-radius:5px;
+    border:1px solid #ddd;
+    outline:1px solid $purple;
+    width:100%;
+  }
+  p {
+    font-weight:600;
+    color:#666;
+    font-size:14px;
+    padding:8px 0;
+  }
+}

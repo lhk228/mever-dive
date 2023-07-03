@@ -21,7 +21,7 @@ const Intro = () => {
 
 	const guestLogin = () => {
 		setLanding(false);
-		setUserInfo({...userInfo, user_nm:"GUEST", login:true});
+		setUserInfo({...userInfo, user_nm:"GUEST", user_id:"GUEST", user_grade:"게스트", login:true});
 		toastAlert({ msg: `GUEST 로그인되었습니다` });
 	}
 

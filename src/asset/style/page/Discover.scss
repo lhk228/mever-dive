@@ -4,44 +4,114 @@
   overflow:hidden;
   .anticon {
     border-radius:50%;
-    padding:5px;
-    box-shadow:$shadow;
+    text-shadow:0 5px 5px rgba(0,0,0,0.5);
     font-size:30px;
     z-index:11;
-    background:#fff;
     transition:.3s;
-    &:hover {
-      opacity:0.5;
-    }
+    color:#fff;
+    filter: $filterShadow;
   }
   .anticon-info-circle {
-    position:absolute;
+    position:fixed;
     bottom:20px;
     right:20px;
   }
   .anticon-compass {
-    position:absolute;
+    position:fixed;
     bottom:20px;
     left:20px;
   }
 
   .anticon-heart {
-    color:rgba(255, 0, 0, 0.896);
+    transition:.3s;
+    &.selected { color:$red; }
   }
 
   iframe {
+    position:absolute;
     width: 100%;
-    height:100%;
+    height:calc(100% + 60px);
+    top:180px;
+    left:0;
   }
 }
 
 .icon-container {
   width:30px;
   height:100%;
-  position:absolute;
+  position:fixed;
   top:80px;
-  right:30px;
+  right:20px;
+  z-index:11;
   .anticon {
     margin:10px 0;
+  }
+}
+
+.btn-upload {
+  position:fixed;
+  bottom:10px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:10;
+  width:60px;
+  box-shadow:0 2px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius:50%;
+}
+
+
+.discover-popup-container {
+  width:100%;
+  height:100%;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:11;
+  background:rgba(0,0,0,0.8);
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity:0;
+  pointer-events:none;
+  align-items:center;
+  transition:.5s;
+  .popup-wrapper { margin-top:200px; }
+  &.show {
+    opacity:1;
+    pointer-events:auto;
+    .popup-wrapper { margin-top:0px; }
+}
+}
+.popup-wrapper {
+  background:#fff;
+  border-radius:10px;
+  transition:.5s;
+  width:90%;
+  
+  .popup-header {
+    width:100%;
+    display:flex;
+    align-items: center;
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    font-weight:700;
+  }
+
+  .popup-main {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow:column nowrap;
+    padding:10px;
+  }
+
+  .button-area {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top:1px solid #ddd;
+    margin-top:10px;
+    button { margin-left:10px; }
   }
 }

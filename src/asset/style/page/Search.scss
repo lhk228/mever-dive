@@ -1,0 +1,191 @@
+.search-container {
+  position:fixed;
+  opacity:0;
+  top:0;
+  right:-100%;
+  width:100vw;
+  height:100vh;
+  z-index:11;
+  background:#fff;
+  transition:.5s;
+  &.show { right:0; opacity:1; }
+}
+
+.search-box {
+  width:100%;
+  height:60px;
+  padding:10px;
+  box-shadow:$shadow;
+  z-index:2;
+  .anticon { font-size:20px; color:$gray; }
+  input { 
+    width:80%;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    background:#eee;
+    padding:10px
+  }
+}
+
+.search-header {
+  width:100%;
+  height:60px;
+
+}
+
+.search-tag-wrapper {
+  width:100%;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    z-index:1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    z-index:1;
+  }
+}
+
+.search-tag {
+  width:100%;
+  height:60px;
+  padding:10px;
+  display:flex;
+  white-space: nowrap;
+  align-items: center;
+  overflow-x:auto;
+  li {
+    flex: 0 0 auto; /* 아이템의 크기를 고정합니다 */
+    border-radius:20px;
+    background:$purple;
+    color:#fff;
+    padding:5px 10px;
+    font-size:clamp(12px, 4vw, 16px);
+    margin-left:8px;
+    box-shadow:$shadow;
+  }
+}
+
+.list-container {
+  width:100%;
+  height:calc(100% - 120px);
+  background:#fff;
+  display:flex;
+  flex-flow:row wrap;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+  overflow-y:auto;
+  .anticon { 
+    font-size:40px;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    color:$purple;
+    background:#fff;
+    padding:10px;
+    border-radius:50%;
+    z-index:1;
+    filter: drop-shadow(0 5px 2px rgba(0,0,0,0.2));;
+  }
+}
+
+
+.card-container {
+  width:80%;
+  height:80%;
+  border-radius:10px;
+  box-shadow:0 0 8px 1px rgba(0,0,0,0.4);
+  padding:10px 20px;
+  font-size:20px;
+  position:relative;
+  color:#fff;
+  overflow:hidden;
+
+  .card-index {
+    font-size:2em;
+    font-weight:600;
+    margin-top:20%;
+  }
+  .card-title {
+    font-size:1.6em;
+    font-weight:600;
+    margin-top:10px;
+  }
+  .card-subtitle {
+    font-size:1.2em;
+    font-weight:500;
+  }
+  .card-contents {
+    position:absolute;
+    bottom:20px;
+    height:50%;
+    width:80%;
+    display:flex;
+    flex-flow:column wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size:0.8em;
+    font-weight:500;
+  }
+  .card-date {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    font-size:0.6em;
+  }
+  .card-cover {
+    background:rgba(0,0,0,0.8);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+}
+
+.footer-block { 
+  width:100%;
+  height:100px;
+}
+
+//카카오맵
+.marker-overlay {
+  display:flex;
+  min-width:150px;
+  min-height:30px;
+  justify-content: center;
+  align-items: center;
+  border-radius:8px;
+  height:calc(100% + 2px);
+  background:#000;
+  color:#fff;
+  font-size:clamp(12px,3vw,16px);
+  padding:5px;
+  transition:.3s;
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+#react-kakao-maps-sdk-map-container > div:nth-child(1) > div > div:nth-child(6) > div:last-child {
+  background:none!important;
+  border:none!important;
+  & > div:nth-child(1) {
+     display:none;
+  }
+}
+
